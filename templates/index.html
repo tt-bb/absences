@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head lang="fr">
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="/static/style.css" />
+        <link rel="shortcut icon" type="image/x-icon" href="/static/img/favicon.ico" />
+        <title>Fléron — Out Of Office</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="main">
+            <header>
+                <div id="title">
+                    <a href="#"><img src="/static/img/logo.png" alt="Logo de la Commune de Fléron" /></a>
+                    <h1>Réponse automatique</h1>
+                </div>
+            </header>
+            <main>
+                <div id="login_container">
+                    <form action="/" method="POST">
+                        <h3>Connexion </h3>
+                        <input type="text" name="first_name" placeholder="Prénom" required><br>
+                        <input type="text" name="last_name" placeholder="Nom de famille" required><br>
+                        <input type="password" name="password" placeholder="Mot de passe" required><br>
+                        <hr />
+                        <h3>Message d'absence</h3>
+                        <label for="start_date">Votre date de départ</label><br>
+                        <input type="date" name="start_date" id="start_date" min="{{ min_date }}" required><br>
+                        <label for="end_date">Votre date de retour au bureau</label><br>
+                        <input type="date" name="end_date" id="end_date" min="{{ min_date }}" required><br>
+                        <label for="message">Votre réponse automatique</label><br>
+                        <textarea name="message" id="message" rows="10" cols="50">Bonjour, je suis absent(e).</textarea>
+                        <input type="submit" value="Envoyer">
+                    </form>
+                </div>
+            </main>
+            <footer>
+                <p>Commune de Fléron - Service TIC</p>
+                <p>En cas de problème avec le formulaire, merci d'utiliser les <a href="https://bugs.fleron.be" target="_blank">tickets</a>.</p>
+            </footer>
+        </div>
+    </body>
+</html>
